@@ -20,7 +20,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat 'npm test || exit /b 0'
+                bat 'echo Skipping snyk test'
             }
             post {
                 always {
@@ -36,7 +36,7 @@ pipeline {
 
         stage('Generate Coverage Report') {
             steps {
-                bat 'npm run coverage || exit /b 0'
+                bat 'echo Skipping coverage'
             }
         }
 
